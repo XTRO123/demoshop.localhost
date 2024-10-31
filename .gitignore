@@ -1,3 +1,5 @@
+parserExample/vendor
+parserExample/sources
 # assets
 /assets/.thumbs/*
 !/assets/.thumbs/index.html
@@ -98,5 +100,4 @@ Desktop.ini
 
 # dev
 .vscode/
-
- 
+.osp
