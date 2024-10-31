@@ -34,10 +34,13 @@ parserExample/sources
 !/assets/files/index.html
 !/assets/files/.htaccess
 
-/assets/images/*
+
+# /assets/images/* # democontent. Remove in real world
 !/assets/images/index.html
 !/assets/images/evo-logo.png
 !/assets/images/.htaccess
+!/assets/images/noimage.jpg
+!/assets/images/ogdefault.jpg
 
 /assets/import/*
 !/assets/import/index.html
