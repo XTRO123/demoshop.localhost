@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 31 2024 г., 22:09
+-- Время создания: Окт 31 2024 г., 22:48
 -- Версия сервера: 10.8.4-MariaDB
 -- Версия PHP: 8.1.9
 
@@ -41,7 +41,7 @@ CREATE TABLE `adkq_active_users` (
 --
 
 INSERT INTO `adkq_active_users` (`sid`, `internalKey`, `username`, `lasthit`, `action`, `id`) VALUES
-('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 'admin', 1730401775, '13', 0);
+('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 'admin', 1730403892, '67', 17);
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE `adkq_active_user_sessions` (
 --
 
 INSERT INTO `adkq_active_user_sessions` (`sid`, `internalKey`, `lasthit`, `ip`) VALUES
-('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 1730401775, '127.0.0.1');
+('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 1730403892, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -102,7 +102,8 @@ INSERT INTO `adkq_categories` (`id`, `category`, `rank`) VALUES
 (5, 'Commerce', 3),
 (6, 'editDocs', 4),
 (7, 'Шаблоны', 7),
-(8, 'Контент', 1);
+(8, 'Контент', 1),
+(9, 'Filter params', 0);
 
 -- --------------------------------------------------------
 
@@ -325,7 +326,54 @@ CREATE TABLE `adkq_manager_log` (
 --
 
 INSERT INTO `adkq_manager_log` (`id`, `timestamp`, `internalKey`, `username`, `action`, `itemid`, `itemname`, `message`, `ip`, `useragent`) VALUES
-(1, 1730401775, 1, 'admin', 13, '', '-', 'Viewing logging', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36');
+(1, 1730401775, 1, 'admin', 13, '', '-', 'Viewing logging', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(2, 1730401922, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(3, 1730401998, 1, 'admin', 16, '9', 'Text', 'Editing template', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(4, 1730402002, 1, 'admin', 96, '9', 'Text Копия', 'Duplicate Template', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(5, 1730402002, 1, 'admin', 16, '11', 'Text Копия', 'Editing template', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(6, 1730402024, 1, 'admin', 20, '11', 'Sitemap', 'Saving template', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(7, 1730402025, 1, 'admin', 16, '11', 'Sitemap', 'Editing template', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(8, 1730402027, 1, 'admin', 4, '', 'Новый ресурс', 'Creating a resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(9, 1730402031, 1, 'admin', 4, '-', 'Новый ресурс', 'Creating a resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(10, 1730402031, 1, 'admin', 67, '-', '-', 'Removing locks', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(11, 1730402039, 1, 'admin', 5, '-', 'sitemap.xml', 'Saving resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(12, 1730402040, 1, 'admin', 27, '104', 'sitemap.xml', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(13, 1730402049, 1, 'admin', 5, '104', 'sitemap.xml', 'Saving resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(14, 1730402049, 1, 'admin', 27, '104', 'sitemap.xml', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(15, 1730402093, 1, 'admin', 27, '104', 'sitemap.xml', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(16, 1730402101, 1, 'admin', 5, '104', 'sitemap.xml', 'Saving resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(17, 1730402101, 1, 'admin', 27, '104', 'sitemap.xml', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(18, 1730402641, 1, 'admin', 301, '4', 'Изображение для соцсетей', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(19, 1730402663, 1, 'admin', 302, '4', 'Изображение для соцсетей', 'Save Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(20, 1730402663, 1, 'admin', 301, '4', 'Изображение для соцсетей', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(21, 1730402665, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(22, 1730402680, 1, 'admin', 5, '4', 'Cat Section One', 'Saving resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(23, 1730402680, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(24, 1730402726, 1, 'admin', 302, '4', 'Изображение для соцсетей', 'Save Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(25, 1730402726, 1, 'admin', 301, '4', 'Изображение для соцсетей', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(26, 1730402728, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(27, 1730402749, 1, 'admin', 27, '1', 'Главная', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(28, 1730402820, 1, 'admin', 27, '87', 'Praesentium doloremque debitis sit eum nemo provident.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(29, 1730402832, 1, 'admin', 16, '3', 'Product', 'Editing template', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(30, 1730402837, 1, 'admin', 117, '3', '-', 'Editing tv rank', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(31, 1730402866, 1, 'admin', 117, '3', '-', 'Editing tv rank', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(32, 1730402870, 1, 'admin', 27, '87', 'Praesentium doloremque debitis sit eum nemo provident.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(33, 1730402878, 1, 'admin', 120, '', '-', 'Idle (unknown)', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(34, 1730402901, 1, 'admin', 27, '87', 'Praesentium doloremque debitis sit eum nemo provident.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(35, 1730402908, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(36, 1730402927, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(37, 1730403792, 1, 'admin', 300, '', 'Новый шаблон', 'Create Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(38, 1730403828, 1, 'admin', 302, '-', 'Brand', 'Save Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(39, 1730403829, 1, 'admin', 301, '17', 'Brand', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(40, 1730403833, 1, 'admin', 27, '87', 'Praesentium doloremque debitis sit eum nemo provident.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(41, 1730403841, 1, 'admin', 304, '17', 'product_brand Копия', 'Duplicate Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(42, 1730403841, 1, 'admin', 301, '18', 'Brand Duplicate ', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(43, 1730403854, 1, 'admin', 302, '18', 'Colors', 'Save Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(44, 1730403855, 1, 'admin', 301, '18', 'Colors', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(45, 1730403875, 1, 'admin', 301, '17', 'Brand', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(46, 1730403880, 1, 'admin', 302, '17', 'Brand', 'Save Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(47, 1730403881, 1, 'admin', 301, '17', 'Brand', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(48, 1730403883, 1, 'admin', 27, '87', 'Praesentium doloremque debitis sit eum nemo provident.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -880,7 +928,8 @@ INSERT INTO `adkq_site_content` (`id`, `type`, `contentType`, `pagetitle`, `long
 (98, 'document', 'text/html', 'Fugiat placeat sed voluptas.', '', '', 'fugiat-placeat-sed-voluptas', '', 1, 0, 0, 5, 0, '', 'Eius adipisci blanditiis autem nihil. Expedita quia eaque quo id maxime cumque est voluptatem. Unde magnam beatae velit voluptas eos. Harum eius velit voluptatibus aspernatur expedita. Fugit sint ea facere dolores consequatur blanditiis. Et ipsum ut laborum voluptas. At provident aperiam minus dolorem cumque autem. Dolor consequuntur ut et necessitatibus architecto deserunt sit. Qui in enim dolor ut rerum. Rerum eveniet non sit dolorum doloremque qui. Delectus ut consequatur sed cum. Omnis odit et ut ratione totam deserunt. Soluta natus excepturi quia dolorem sapiente quidem error. Sequi aut commodi excepturi ipsum. Aut et ea eaque nihil eos. Totam ullam molestiae et omnis. Nam voluptatem beatae officiis et. Accusantium dolores quas laboriosam error. Iste voluptas similique maiores eligendi enim est expedita. Et at eius in sunt. Non possimus aut non iure ut perferendis qui. Et sed sequi aperiam quasi id molestiae velit.', 1, 3, 71, 1, 1, 1, 1728756116, 1, 1729712250, 0, 0, 0, 1728756173, 0, '', 0, 0, 0, 0, 1, 1),
 (99, 'document', 'text/html', 'Eum quo a odio ut maiores.', '', '', 'eum-quo-a-odio-ut-maiores', '', 1, 0, 0, 7, 0, '', 'Quisquam qui deserunt veritatis odio voluptates et quia. Sunt nihil recusandae assumenda consequatur est sunt inventore. At magni fuga ipsum debitis. Nihil autem soluta qui aut consequatur distinctio voluptatem. Non omnis reprehenderit esse labore saepe voluptatem modi voluptas. Quo et omnis officia voluptas quis. Occaecati adipisci quia ad inventore ratione dolor. Repudiandae sit qui laudantium totam ducimus. Repellendus neque nisi inventore omnis eligendi qui suscipit. Ipsa similique minus voluptas minus. Enim a dolore veniam fugit qui deleniti inventore. Rerum qui sed perferendis aut iure magnam aspernatur. Impedit sint magnam recusandae hic. Nesciunt vero nihil voluptatem velit. Recusandae recusandae rerum animi nobis rerum. Sint odit officia quo est architecto sapiente autem. Id praesentium reprehenderit cumque dolorem inventore recusandae aut nisi. Nostrum placeat reprehenderit sequi dolorem excepturi. Natus excepturi quasi ut quidem corrupti. Illo reprehenderit qui ab quia.', 1, 3, 21, 1, 1, 1, 1728756116, 1, 1729713041, 0, 0, 0, 1728756173, 0, '', 0, 0, 0, 0, 1, 1),
 (100, 'document', 'text/html', 'Voluptates amet dolorem aut nam quos.', '', '', 'voluptates-amet-dolorem-aut-nam-quos', '', 1, 0, 0, 8, 0, '', 'Consequatur dolorem sit soluta et. Aut qui officiis doloremque ut magnam consequatur. Eum occaecati tenetur eligendi aspernatur. Doloremque possimus reprehenderit maxime in nisi mollitia consequatur. Aut consequatur neque rem est et ipsam aut. Quia illum quasi aspernatur magni in eveniet quam. A dolores nihil qui voluptatibus in qui occaecati. Ratione adipisci consequatur itaque minus amet voluptatem est. Est quas et voluptatibus in quia. Dolores laboriosam temporibus tenetur voluptas perferendis omnis. Aliquam at modi eos rerum. Accusamus est libero neque id et dignissimos. Consequatur voluptates fugiat cum voluptatem facilis possimus. Eveniet et rerum porro ut. Voluptates qui delectus culpa nam laborum. Nisi mollitia sequi eligendi aliquid. Ducimus laboriosam libero fuga vero velit. Omnis temporibus eveniet veritatis autem aliquid dicta. Et quidem quis quas voluptatum explicabo. Et saepe vel libero rerum porro.', 1, 3, 3, 1, 1, 1, 1728756116, 1, 1729712900, 0, 0, 0, 1728756173, 0, '', 0, 0, 0, 0, 1, 1),
-(101, 'document', 'text/html', 'Rerum ipsa ex corporis.', '', '', 'rerum-ipsa-ex-corporis', '', 1, 0, 0, 4, 0, '', 'Eveniet et quidem odio libero voluptas. Accusantium qui est eius illum. Sequi natus tempore occaecati temporibus quia excepturi. Est velit aut odit id. Quia aspernatur repellat aut ratione sunt architecto voluptatem. Deserunt facilis sequi praesentium. Delectus cumque suscipit nam voluptatem fuga. Ut et autem qui et qui. Id non quas natus. Est est molestiae repellat earum. Ea modi asperiores rem quia dolorem occaecati. Praesentium voluptas optio nostrum est id dolores. Explicabo est molestiae voluptas libero neque enim dolor. Quae aut facilis tenetur fugit. Aut inventore ut velit enim nostrum distinctio magnam. Nulla libero nobis similique culpa. Praesentium libero qui sapiente eaque. Impedit dolores quo architecto beatae. Aut architecto officiis illo doloremque. Autem dolore et iusto. Excepturi fugit quia illo culpa. Facere natus qui facere officiis. Totam quasi laboriosam non nulla ut repellendus. Ullam accusantium blanditiis inventore ducimus non corporis.', 1, 3, 8, 1, 1, 1, 1728756116, 1, 1729712007, 0, 0, 0, 1728756173, 0, '', 0, 0, 0, 0, 1, 1);
+(101, 'document', 'text/html', 'Rerum ipsa ex corporis.', '', '', 'rerum-ipsa-ex-corporis', '', 1, 0, 0, 4, 0, '', 'Eveniet et quidem odio libero voluptas. Accusantium qui est eius illum. Sequi natus tempore occaecati temporibus quia excepturi. Est velit aut odit id. Quia aspernatur repellat aut ratione sunt architecto voluptatem. Deserunt facilis sequi praesentium. Delectus cumque suscipit nam voluptatem fuga. Ut et autem qui et qui. Id non quas natus. Est est molestiae repellat earum. Ea modi asperiores rem quia dolorem occaecati. Praesentium voluptas optio nostrum est id dolores. Explicabo est molestiae voluptas libero neque enim dolor. Quae aut facilis tenetur fugit. Aut inventore ut velit enim nostrum distinctio magnam. Nulla libero nobis similique culpa. Praesentium libero qui sapiente eaque. Impedit dolores quo architecto beatae. Aut architecto officiis illo doloremque. Autem dolore et iusto. Excepturi fugit quia illo culpa. Facere natus qui facere officiis. Totam quasi laboriosam non nulla ut repellendus. Ullam accusantium blanditiis inventore ducimus non corporis.', 1, 3, 8, 1, 1, 1, 1728756116, 1, 1729712007, 0, 0, 0, 1728756173, 0, '', 0, 0, 0, 0, 1, 1),
+(104, 'document', 'text/xml', 'sitemap.xml', '', 'sitemap.xml', 'sitemap.xml', '', 1, 0, 0, 0, 0, '', '', 1, 11, 9, 1, 0, 1, 1730402039, 1, 1730402049, 0, 0, 0, 1730402039, 1, '', 0, 0, 0, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -917,7 +966,8 @@ INSERT INTO `adkq_site_content_closure` (`closure_id`, `ancestor`, `descendant`,
 (4, 2, 102, 1),
 (5, 102, 102, 0),
 (6, 2, 103, 1),
-(7, 103, 103, 0);
+(7, 103, 103, 0),
+(8, 104, 104, 0);
 
 -- --------------------------------------------------------
 
@@ -1185,7 +1235,8 @@ INSERT INTO `adkq_site_templates` (`id`, `templatename`, `templatealias`, `templ
 (7, 'Article', 'pages.article', 'Pages\\Article', '', 0, 7, '', 0, '', 0, 1, 1729714651, 1729714665),
 (8, '404', 'pages.404', 'Pages\\Text', '', 0, 7, '', 0, '', 0, 1, 1729885626, 1729885858),
 (9, 'Text', 'pages.text', 'Pages\\Text', '', 0, 7, '', 0, '', 0, 1, 1729885899, 1729885918),
-(10, 'Contacts', 'pages.contacts', 'Pages\\Text', '', 0, 7, '', 0, '', 0, 1, 1729889114, 1729889217);
+(10, 'Contacts', 'pages.contacts', 'Pages\\Text', '', 0, 7, '', 0, '', 0, 1, 1729889114, 1729889217),
+(11, 'Sitemap', 'pages.sitemap', 'Seo\\Sitemap', '', 0, 7, '', 0, '', 0, 1, 1730402002, 1730402024);
 
 -- --------------------------------------------------------
 
@@ -1220,7 +1271,7 @@ INSERT INTO `adkq_site_tmplvars` (`id`, `type`, `name`, `caption`, `description`
 (1, 'textareamini', 'metadescription', 'Meta description', 'Описание для поисковых машин', 0, 4, 0, '', 0, '', '', '', 1728749440, 1728751396, NULL),
 (2, 'text', 'metatitle', 'Содержимое в теге title', 'Тег title', 0, 4, 0, '', 0, '', '', '', 1728749440, 1728751396, NULL),
 (3, 'checkbox', 'noIndex', 'Индексировать страницу?', 'Если выбрать, добавит noindex, nofollow в секцию head', 0, 4, 0, 'Нет, не индексировать==1', 0, '', '', '0', 1728749440, 1728751396, NULL),
-(4, 'image', 'ogImage', 'Изображение для соцсетей', 'Рекомендуется фото 1200:630', 0, 4, 0, '', 0, '', '', '', 1728749440, 1728751396, NULL),
+(4, 'image', 'ogImage', 'Изображение для соцсетей', 'Рекомендуется фото 1200:630', 0, 4, 0, '', 0, '', '', 'assets/images/ogdefault.png', 1728749440, 1730402726, '[]'),
 (5, 'dropdown', 'ogType', 'Тип страницы', 'Og:type', 0, 4, 0, 'статья, публикация==article||товар, услуга==product||обычная страница==website||видео==video.movie||профайл==profile||сингл-песня==music.song||альбом==music.album||плейлист==music.playlist||радиостанция==music.radio_station||эпизод из видео==video.episode||ТВ-шоу==video.tv_show||другая категория видеоматериала==video.other||книга==book', 0, '', '', 'website', 1728749440, 1728751396, NULL),
 (6, 'dropdown', 'sitemap_changefreq', 'Период обновления', 'Для карты сайта', 0, 4, 0, 'always||hourly||daily||weekly||monthly||yearly||never', 0, '', '', 'weekly', 1728749440, 1728751396, NULL),
 (7, 'checkbox', 'sitemap_exclude', 'Отображение в sitemap', 'Для карты сайта', 0, 4, 0, 'Скрыть==1', 0, '', '', '0', 1728749440, 1728751396, NULL),
@@ -1228,7 +1279,9 @@ INSERT INTO `adkq_site_tmplvars` (`id`, `type`, `name`, `caption`, `description`
 (9, 'text', 'price', 'Цена товара', 'Сумма, например 998.30', 0, 8, 0, '', 0, '', '', '', 1728751299, 1728754954, '[]'),
 (14, 'image', 'product_photo', 'Главное фото товара', '', 0, 8, 0, '', 0, '', '', '', 1728754900, 1728754900, '[]'),
 (15, 'checkbox', 'in_stock', 'Наличие товара', 'Если товара нет, ставь галочку', 0, 8, 0, 'Нет в наличии==0', 0, '', '', '1', 1728754940, 1728849678, '[]'),
-(16, 'image', 'article_photo', 'Main photo', '', 0, 2, 0, '', 0, '', '', '', 1729751382, 1729751402, '[]');
+(16, 'image', 'article_photo', 'Main photo', '', 0, 2, 0, '', 0, '', '', '', 1729751382, 1729751402, '[]'),
+(17, 'option', 'product_brand', 'Brand', '', 0, 9, 0, '', 0, '', '', '', 1730403828, 1730403880, '[]'),
+(18, 'checkbox', 'product_color', 'Colors', '', 0, 9, 0, '', 0, '', '', '', 1730403841, 1730403854, '[]');
 
 -- --------------------------------------------------------
 
@@ -1504,7 +1557,9 @@ INSERT INTO `adkq_site_tmplvar_contentvalues` (`id`, `tmplvarid`, `contentid`, `
 (246, 16, 16, 'assets/images/2024-10-31_21-25-15.png'),
 (247, 3, 13, NULL),
 (248, 7, 13, NULL),
-(249, 15, 13, NULL);
+(249, 15, 13, NULL),
+(250, 3, 104, '1'),
+(251, 7, 104, '1');
 
 -- --------------------------------------------------------
 
@@ -1525,7 +1580,7 @@ CREATE TABLE `adkq_site_tmplvar_templates` (
 INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VALUES
 (1, 1, 1),
 (1, 2, 1),
-(1, 3, 1),
+(1, 3, 5),
 (1, 4, 1),
 (1, 5, 1),
 (1, 6, 1),
@@ -1533,9 +1588,10 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (1, 8, 1),
 (1, 9, 1),
 (1, 10, 1),
+(1, 11, 1),
 (2, 1, 0),
 (2, 2, 0),
-(2, 3, 0),
+(2, 3, 4),
 (2, 4, 2),
 (2, 5, 2),
 (2, 6, 0),
@@ -1543,9 +1599,10 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (2, 8, 2),
 (2, 9, 2),
 (2, 10, 2),
+(2, 11, 2),
 (3, 1, 2),
 (3, 2, 2),
-(3, 3, 2),
+(3, 3, 3),
 (3, 4, 3),
 (3, 5, 3),
 (3, 6, 2),
@@ -1553,9 +1610,10 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (3, 8, 3),
 (3, 9, 3),
 (3, 10, 3),
+(3, 11, 3),
 (4, 1, 3),
 (4, 2, 3),
-(4, 3, 3),
+(4, 3, 6),
 (4, 4, 4),
 (4, 5, 4),
 (4, 6, 3),
@@ -1563,9 +1621,10 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (4, 8, 4),
 (4, 9, 4),
 (4, 10, 4),
+(4, 11, 4),
 (5, 1, 4),
 (5, 2, 4),
-(5, 3, 4),
+(5, 3, 7),
 (5, 4, 5),
 (5, 5, 5),
 (5, 6, 4),
@@ -1573,9 +1632,10 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (5, 8, 5),
 (5, 9, 5),
 (5, 10, 5),
+(5, 11, 5),
 (6, 1, 5),
 (6, 2, 5),
-(6, 3, 5),
+(6, 3, 9),
 (6, 4, 6),
 (6, 5, 6),
 (6, 6, 5),
@@ -1583,9 +1643,10 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (6, 8, 6),
 (6, 9, 6),
 (6, 10, 6),
+(6, 11, 6),
 (7, 1, 6),
 (7, 2, 6),
-(7, 3, 6),
+(7, 3, 8),
 (7, 4, 7),
 (7, 5, 7),
 (7, 6, 6),
@@ -1593,9 +1654,10 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (7, 8, 7),
 (7, 9, 7),
 (7, 10, 7),
+(7, 11, 7),
 (8, 1, 7),
 (8, 2, 7),
-(8, 3, 7),
+(8, 3, 10),
 (8, 4, 8),
 (8, 5, 8),
 (8, 6, 7),
@@ -1603,10 +1665,13 @@ INSERT INTO `adkq_site_tmplvar_templates` (`tmplvarid`, `templateid`, `rank`) VA
 (8, 8, 8),
 (8, 9, 8),
 (8, 10, 8),
-(9, 3, 0),
+(8, 11, 8),
+(9, 3, 1),
 (14, 3, 0),
-(15, 3, 0),
-(16, 7, 0);
+(15, 3, 2),
+(16, 7, 0),
+(17, 3, 0),
+(18, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -2434,13 +2499,13 @@ ALTER TABLE `adkq_user_values`
 -- AUTO_INCREMENT для таблицы `adkq_active_user_locks`
 --
 ALTER TABLE `adkq_active_user_locks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_categories`
 --
 ALTER TABLE `adkq_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_commerce_currency`
@@ -2500,7 +2565,7 @@ ALTER TABLE `adkq_event_log`
 -- AUTO_INCREMENT для таблицы `adkq_manager_log`
 --
 ALTER TABLE `adkq_manager_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_membergroup_access`
@@ -2548,13 +2613,13 @@ ALTER TABLE `adkq_role_permissions`
 -- AUTO_INCREMENT для таблицы `adkq_site_content`
 --
 ALTER TABLE `adkq_site_content`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_site_content_closure`
 --
 ALTER TABLE `adkq_site_content_closure`
-  MODIFY `closure_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `closure_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_site_htmlsnippets`
@@ -2596,13 +2661,13 @@ ALTER TABLE `adkq_site_snippets`
 -- AUTO_INCREMENT для таблицы `adkq_site_templates`
 --
 ALTER TABLE `adkq_site_templates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_site_tmplvars`
 --
 ALTER TABLE `adkq_site_tmplvars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_site_tmplvar_access`
@@ -2614,7 +2679,7 @@ ALTER TABLE `adkq_site_tmplvar_access`
 -- AUTO_INCREMENT для таблицы `adkq_site_tmplvar_contentvalues`
 --
 ALTER TABLE `adkq_site_tmplvar_contentvalues`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_system_eventnames`
