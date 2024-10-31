@@ -36,7 +36,7 @@ trait FilterTrait
 		$json = evo()->runSnippet('eFilterResult', [
 			'parents' => evo()->documentObject['id'],
 			'api' => 1,
-            'tvList' => 'price,product_photo,in_stock',
+            'tvList' => 'price,product_photo,in_stock,product_brand,product_color',
 			'tvPrefix' => '',
 			'display' => 12,
 			'depth' => '4',
