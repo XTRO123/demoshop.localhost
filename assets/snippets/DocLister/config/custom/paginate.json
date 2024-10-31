@@ -1,0 +1,16 @@
+{
+    "paginate": "pages",
+    "display": "10",
+    "PrevNextAlwaysShow": "1",
+    "TplNextP": "@CODE:<li class=\"page-item\"><a class=\"page-link\" href=\"[+link+]\"> > </a></li>",
+    "TplPrevP": "@CODE:<li class=\"page-item\"><a class=\"page-link\" href=\"[+link+]\"><</a></li>",
+    "TplNextI": "@CODE:<li class=\"disabled page-item\"><a class=\"page-link\" href=\"[+link+]\"> > </a></li>",
+    "TplPrevI": "@CODE:<li class=\"disabled page-item\"><a class=\"page-link\" href=\"[+link+]\"><</a></li>",
+    "TplPage": "@CODE:<li itemprop=\"itemListElement\" itemscope itemtype=\"https: //schema.org/ListItem\" class=\"page-item\"><a class=\"page-link\" href=\"[+link+]\" itemprop=\"item\"><span itemprop=\"name\">[+num+]</span></a><meta itemprop=\"position\" content=\"[+num+]\" /></li>",
+    "TplFirstP": "@CODE:<li class=\"page-item\"><a class=\"page-link\" href=\"[+link+]\"><<</a></li>",
+    "TplLastP": "@CODE:<li class=\"page-item\"><a class=\"page-link\" href=\"[+link+]\"> >> </a></li>",
+    "TplFirstI": "@CODE:<li class=\"page-item disabled\"><a class=\"page-link\" href=\"[+link+]\"><<</a></li>",
+    "TplLastI": "@CODE:<li class=\"page-item disabled\"><a class=\"page-link\" href=\"[+link+]\"> >> </a></li>",
+    "TplCurrentPage": "@CODE:<li itemprop=\"itemListElement\" itemscope itemtype=\"https: //schema.org/ListItem\" class=\"page-item active\"><a class=\"page-link\" href=\"[+link+]\" itemprop=\"item\"><span itemprop=\"name\">[+num+]</span></a><meta itemprop=\"position\" content=\"[+num+]\" /></li>",
+    "TplWrapPaginate": "@CODE:<nav class=\"paginate\"><ul itemscope itemtype=\"https: //schema.org/BreadcrumbList\" class=\"pagination\">[+wrap+]</ul></nav>"
+}
