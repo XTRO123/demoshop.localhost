@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 31 2024 г., 23:08
+-- Время создания: Ноя 01 2024 г., 00:05
 -- Версия сервера: 10.8.4-MariaDB
 -- Версия PHP: 8.1.9
 
@@ -41,7 +41,7 @@ CREATE TABLE `adkq_active_users` (
 --
 
 INSERT INTO `adkq_active_users` (`sid`, `internalKey`, `username`, `lasthit`, `action`, `id`) VALUES
-('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 'admin', 1730405240, '67', 4);
+('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 'admin', 1730408313, '67', 57);
 
 -- --------------------------------------------------------
 
@@ -57,6 +57,15 @@ CREATE TABLE `adkq_active_user_locks` (
   `elementId` int(11) NOT NULL DEFAULT 0,
   `lasthit` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `adkq_active_user_locks`
+--
+
+INSERT INTO `adkq_active_user_locks` (`id`, `sid`, `internalKey`, `elementType`, `elementId`, `lasthit`) VALUES
+(40, 's4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 6, 5, 1730408184),
+(41, 's4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 2, 9, 1730408215),
+(42, 's4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 7, 2, 1730408263);
 
 -- --------------------------------------------------------
 
@@ -76,7 +85,7 @@ CREATE TABLE `adkq_active_user_sessions` (
 --
 
 INSERT INTO `adkq_active_user_sessions` (`sid`, `internalKey`, `lasthit`, `ip`) VALUES
-('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 1730405240, '127.0.0.1');
+('s4gtt1odhlcq5u6gm1g38ep6gvkv2m43', 1, 1730408313, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -480,7 +489,22 @@ INSERT INTO `adkq_manager_log` (`id`, `timestamp`, `internalKey`, `username`, `a
 (98, 1730405186, 1, 'admin', 112, '4', 'EditDocs', 'Execute module', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
 (99, 1730405190, 1, 'admin', 112, '4', 'EditDocs', 'Execute module', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
 (100, 1730405219, 1, 'admin', 27, '42', 'Id cupiditate quod officiis sit consequatur.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
-(101, 1730405236, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36');
+(101, 1730405236, 1, 'admin', 27, '4', 'Cat Section One', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(102, 1730408150, 1, 'admin', 27, '2', 'Каталог', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(103, 1730408184, 1, 'admin', 108, '5', 'eLists', 'Edit module', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(104, 1730408196, 1, 'admin', 76, '', '-', 'Element management', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(105, 1730408209, 1, 'admin', 301, '9', 'Цена товара', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(106, 1730408215, 1, 'admin', 302, '9', 'Цена товара', 'Save Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(107, 1730408216, 1, 'admin', 301, '9', 'Цена товара', 'Edit Template Variable', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(108, 1730408221, 1, 'admin', 27, '2', 'Каталог', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(109, 1730408246, 1, 'admin', 5, '2', 'Каталог', 'Saving resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(110, 1730408246, 1, 'admin', 27, '2', 'Каталог', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(111, 1730408263, 1, 'admin', 5, '2', 'Каталог', 'Saving resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(112, 1730408263, 1, 'admin', 27, '2', 'Каталог', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(113, 1730408305, 1, 'admin', 71, '', '-', 'Searching', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(114, 1730408307, 1, 'admin', 27, '57', 'Minima saepe ipsum reiciendis aperiam omnis.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(115, 1730408312, 1, 'admin', 5, '57', 'Minima saepe ipsum reiciendis aperiam omnis.', 'Saving resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36'),
+(116, 1730408312, 1, 'admin', 27, '57', 'Minima saepe ipsum reiciendis aperiam omnis.', 'Editing resource', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 YaBrowser/24.10.0.0 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -1398,7 +1422,7 @@ INSERT INTO `adkq_site_tmplvars` (`id`, `type`, `name`, `caption`, `description`
 (6, 'dropdown', 'sitemap_changefreq', 'Период обновления', 'Для карты сайта', 0, 4, 0, 'always||hourly||daily||weekly||monthly||yearly||never', 0, '', '', 'weekly', 1728749440, 1728751396, NULL),
 (7, 'checkbox', 'sitemap_exclude', 'Отображение в sitemap', 'Для карты сайта', 0, 4, 0, 'Скрыть==1', 0, '', '', '0', 1728749440, 1728751396, NULL),
 (8, 'dropdown', 'sitemap_priority', 'Приоритет страницы', 'Для карты сайта', 0, 4, 0, '0.1||0.2||0.3||0.4||0.5||0.6||0.7||0.8||0.9||1', 0, '', '', '0.9', 1728749440, 1728751396, NULL),
-(9, 'text', 'price', 'Цена товара', 'Сумма, например 998.30', 0, 8, 0, '', 0, '', '', '', 1728751299, 1728754954, '[]'),
+(9, 'text', 'price', 'Цена товара', 'Сумма, например 998.30', 0, 9, 0, '', 0, '', '', '', 1728751299, 1730408215, '[]'),
 (14, 'image', 'product_photo', 'Главное фото товара', '', 0, 8, 0, '', 0, '', '', '', 1728754900, 1728754900, '[]'),
 (15, 'checkbox', 'in_stock', 'Наличие товара', 'Если товара нет, ставь галочку', 0, 8, 0, 'Нет в наличии==0', 0, '', '', '1', 1728754940, 1728849678, '[]'),
 (16, 'image', 'article_photo', 'Main photo', '', 0, 2, 0, '', 0, '', '', '', 1729751382, 1729751402, '[]'),
@@ -1498,7 +1522,7 @@ INSERT INTO `adkq_site_tmplvar_contentvalues` (`id`, `tmplvarid`, `contentid`, `
 (60, 9, 54, '3211'),
 (61, 9, 55, '2563'),
 (62, 9, 56, '2541'),
-(63, 9, 57, '31532'),
+(63, 9, 57, '3153'),
 (64, 9, 58, '2689'),
 (65, 9, 59, '3244'),
 (66, 9, 60, '1542'),
@@ -1683,7 +1707,7 @@ INSERT INTO `adkq_site_tmplvar_contentvalues` (`id`, `tmplvarid`, `contentid`, `
 (249, 15, 13, NULL),
 (250, 3, 104, '1'),
 (251, 7, 104, '1'),
-(252, 19, 2, '{\"fieldValue\":[{\"param_id\":\"17\",\"cat_name\":\"\",\"list_yes\":\"1\",\"fltr_yes\":\"1\",\"fltr_type\":\"4\",\"fltr_name\":\"Brand\",\"fltr_many\":\"\",\"fltr_href\":\"\"},{\"param_id\":\"18\",\"cat_name\":\"\",\"list_yes\":\"1\",\"fltr_yes\":\"1\",\"fltr_type\":\"1\",\"fltr_name\":\"Color\",\"fltr_many\":\"1\",\"fltr_href\":\"\"}],\"fieldSettings\":{\"autoincrement\":1}}'),
+(252, 19, 2, '{\"fieldValue\":[{\"param_id\":\"9\",\"cat_name\":\"\",\"list_yes\":\"\",\"fltr_yes\":\"1\",\"fltr_type\":\"6\",\"fltr_name\":\"Price\",\"fltr_many\":\"\",\"fltr_href\":\"\"},{\"param_id\":\"17\",\"cat_name\":\"\",\"list_yes\":\"1\",\"fltr_yes\":\"1\",\"fltr_type\":\"4\",\"fltr_name\":\"Brand\",\"fltr_many\":\"\",\"fltr_href\":\"\"},{\"param_id\":\"18\",\"cat_name\":\"\",\"list_yes\":\"1\",\"fltr_yes\":\"1\",\"fltr_type\":\"1\",\"fltr_name\":\"Color\",\"fltr_many\":\"1\",\"fltr_href\":\"\"}],\"fieldSettings\":{\"autoincrement\":1}}'),
 (256, 17, 27, '1'),
 (257, 18, 27, '3'),
 (258, 18, 15, '2'),
@@ -1849,7 +1873,10 @@ INSERT INTO `adkq_site_tmplvar_contentvalues` (`id`, `tmplvarid`, `contentid`, `
 (420, 18, 100, '3'),
 (421, 17, 100, '3'),
 (422, 18, 101, '2'),
-(423, 17, 101, '2');
+(423, 17, 101, '2'),
+(424, 3, 57, NULL),
+(425, 7, 57, NULL),
+(426, 15, 57, NULL);
 
 -- --------------------------------------------------------
 
@@ -2803,7 +2830,7 @@ ALTER TABLE `adkq_user_values`
 -- AUTO_INCREMENT для таблицы `adkq_active_user_locks`
 --
 ALTER TABLE `adkq_active_user_locks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_categories`
@@ -2881,7 +2908,7 @@ ALTER TABLE `adkq_list_value_table`
 -- AUTO_INCREMENT для таблицы `adkq_manager_log`
 --
 ALTER TABLE `adkq_manager_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_membergroup_access`
@@ -2995,7 +3022,7 @@ ALTER TABLE `adkq_site_tmplvar_access`
 -- AUTO_INCREMENT для таблицы `adkq_site_tmplvar_contentvalues`
 --
 ALTER TABLE `adkq_site_tmplvar_contentvalues`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=424;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=427;
 
 --
 -- AUTO_INCREMENT для таблицы `adkq_system_eventnames`

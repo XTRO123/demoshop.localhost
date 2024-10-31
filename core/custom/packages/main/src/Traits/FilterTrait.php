@@ -31,7 +31,7 @@ trait FilterTrait
 	 * в плейсхолдер catalog
 	 * а пагинацию в pages
 	 */
-	public function getCatalog()
+	public function getFilteredCatalog()
 	{
 		$json = evo()->runSnippet('eFilterResult', [
 			'parents' => evo()->documentObject['id'],
@@ -49,7 +49,7 @@ trait FilterTrait
 		if (!empty($json)) {
 			$arr = json_decode($json, 1);
 		}
-		$this->data['catalog'] = $arr;
+		$this->data['products'] = $arr;
 		$this->data['pages'] = evo()->getPlaceholder('pages');
 	}
 
