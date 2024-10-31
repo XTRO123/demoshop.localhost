@@ -4,7 +4,9 @@ namespace EvolutionCMS\Main\Controllers\Seo;
 
 use EvolutionCMS\Main\Controllers\BaseController;
 
-
+/**
+ * Просто делаем сайтмап
+ */
 class Sitemap extends BaseController
 {
     public function setPageData()

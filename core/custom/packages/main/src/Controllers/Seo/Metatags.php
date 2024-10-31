@@ -112,7 +112,7 @@ trait Metatags
 
                     break;
                 default:
-                    $ogImage = 'assets/images/ogdefault.jpg';
+                    $ogImage = 'assets/images/ogdefault.png';
                     break;
             }
         }

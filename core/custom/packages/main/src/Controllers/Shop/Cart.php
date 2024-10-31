@@ -1,10 +1,13 @@
 <?php
 
-namespace EvolutionCMS\Main\Controllers\Shop    ;
+namespace EvolutionCMS\Main\Controllers\Shop;
 
 use Carbon\Carbon;
 use EvolutionCMS\Main\Controllers\BaseController;
 
+/**
+ * Страница корзины
+ */
 class Cart extends BaseController
 {
 

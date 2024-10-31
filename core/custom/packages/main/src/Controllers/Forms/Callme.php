@@ -1,6 +1,6 @@
 <?php
 
-namespace EvolutionCMS\Main\Controllers;
+namespace EvolutionCMS\Main\Controllers\Forms;
 
 class Callme
 {
