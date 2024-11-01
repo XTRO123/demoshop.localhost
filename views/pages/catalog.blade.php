@@ -9,7 +9,8 @@
         <div>
             {!! $efilterForm !!}
         </div>
-        <div class="mt-5" id="eFiltr_results_wrapper ">
+        <div class="mt-5 position-relative" id="eFiltr_results_wrapper">
+            <div class="eFiltr_loader spinner-border text-body-emphasis"></div>
             <div class="catalog row" id="eFiltr_results">
                 @if (!@empty($products))
                 @foreach ($products as $product)

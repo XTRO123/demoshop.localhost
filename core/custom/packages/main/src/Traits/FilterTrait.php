@@ -21,7 +21,8 @@ trait FilterTrait
 			'remove_disabled' => 0,
 			'changeState' => 0,
 			'cfg' => 'custom',
-            'activeBlockClass' => 'show'
+            'activeBlockClass' => 'show',
+            
 		]);
 		$efilterForm = evo()->getPlaceholder('eFilter_form') ??  '';
 		$this->data['efilterForm'] = $efilterForm;

@@ -37,7 +37,7 @@ $tplOuterRadio = '
         <div class="js-filter-block-content radios">
             <div id="collapse[+tv_id+]" class="">
                 <div class="form-check mb-2">
-                    <input class="form-check-input" checked type="radio" name="f[[+tv_id+]][]" value="0"> 
+                    <input id="f_[+tv_id+]_[+value+]" class="form-check-input" checked type="radio" name="f[[+tv_id+]][]" value="0"> 
                     <label for="f_[+tv_id+]_[+value+]" class="form-check-label d-flex align-items-center"  >
                         Все 
                     </label>
@@ -117,12 +117,22 @@ $tplOuterMultySelect = '
 ';
 
 //слайдер
-$tplRowSlider = '<div style="display:none;">от<input type="text" id="minCostInp[+tv_id+]" name="f[[+tv_id+]][min]" value="[+minval+]" data-min-val="[+minvalcurr+]"> до <input type="text" id="maxCostInp[+tv_id+]" name="f[[+tv_id+]][max]" value="[+maxval+]" data-max-val="[+maxvalcurr+]"></div>';
+$tplRowSlider = '
+<div class="align-items-center d-flex mt-4">
+    <div class="d-flex me-5 align-items-center">
+    от <input class="ms-2 form-control form-control-sm" type="text" id="minCostInp[+tv_id+]" name="f[[+tv_id+]][min]" value="[+minval+]" data-min-val="[+minvalcurr+]">
+    </div>
+    <div class="d-flex align-items-center ">
+    до <input  class="ms-2 form-control form-control-sm" type="text" id="maxCostInp[+tv_id+]" name="f[[+tv_id+]][max]" value="[+maxval+]" data-max-val="[+maxvalcurr+]">
+    </div>
+</div>';
 $tplOuterSlider = '
-	<div class="fltr_block fltr_block_slider mb-0 mb-5 mb-lg-0 [+active_block_class+]">
+	<div class="filter_block fltr_block_slider mb-0 mb-5 mb-lg-0 [+active_block_class+]">
 		<div class="fltr_name   mb-2 text-body-secondary">[+name+]</div>
 		<div class="fltr_inner fltr_inner_slider fltr_inner[+tv_id+]">
-		<div class="slider_text slider_text[+tv_id+]">от <span id="minCost[+tv_id+]"></span> до <span id="maxCost[+tv_id+]"></span></div>
+            <div class="slider_text slider_text[+tv_id+]">
+                от <span class="badge border-1 text-bg-secondary" id="minCost[+tv_id+]"></span> до <span class="badge border-1 text-bg-secondary" id="maxCost[+tv_id+]"></span>
+            </div>
 		<div id="slider[+tv_id+]" class="mt-4"></div>
 		[+wrapper+]
 		</div>
