@@ -63,6 +63,7 @@ parserExample/sources
 !/core/storage/blade/.gitkeep
 !/core/.install
 /core/storage/sessions/*
+!/core/storage/sessions/.gitkeep
 /core/storage/rss/*
 /core/storage/updater/*
 /core/vendor
