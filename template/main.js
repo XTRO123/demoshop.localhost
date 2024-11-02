@@ -64,7 +64,7 @@ $(document).ready(function () {
             return false;
         },
     }
- 
+
     $('#form_callme').on('submit', function (e) {
         ajax.sendForm('#form_callme_wrapper', '#form_callme', 'ajax/callme', function () {
             setTimeout(function () {
@@ -106,6 +106,7 @@ function showToast(message, title = 'Уведомление', delay = 5000) {
     var toast = new bootstrap.Toast(toastContainer.lastElementChild);
     toast.show();
 }
+
 $(document).on('cart-add-complete.commerce', function (e, params) {
     if (params.response.status != 'success') {
         return;
@@ -124,5 +125,5 @@ $(document).on('cart-add-complete.commerce', function (e, params) {
             break;
     }
 
-    showToast(message,'Магазин',4000)
+    showToast(message, 'Магазин', 1000)
 });
