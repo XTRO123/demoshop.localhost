@@ -11,7 +11,7 @@
     @include('parts.footer')
     @include('parts.modals')
     
-    {!! evo()->getConfig('client_code_footer') !!}
+    {!! evo()->getConfig('client_footer_codes') !!}
 </body>
 
 </html>
