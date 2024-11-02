@@ -7,7 +7,7 @@ use EvolutionCMS\TemplateController;
 use Carbon\Carbon;
 use EvolutionCMS\Main\Controllers\Seo\Metatags;
 
-class BaseController  extends TemplateController
+class BaseController  extends AbstractBase
 {
     use Metatags;
 
@@ -29,10 +29,7 @@ class BaseController  extends TemplateController
      * Данные текущей страницы
      * Переопределять в наследниках
      */
-    public  function setPageData()
-    {
-        throw new \Exception("Метод setPageData должен быть переопределён в вашем контроллере");
-    }
+    public  function setPageData() {}
 
     /**
      * Не переопределять,
@@ -99,7 +96,7 @@ class BaseController  extends TemplateController
         $crumbs = evo()->runSnippet('DLCrumbs', [
             'showCurrent' => 1,
             'hideMain' => 0,
-             'config' => 'crumbs:custom'
+            'config' => 'crumbs:custom'
         ]);
         return  $crumbs;
     }

@@ -4,8 +4,8 @@
             <header>
                 <figure>
                     <img class="img-thumbnail" loading="lazy"
-                        src="@phpthumb($product['product_photo'],'w=200,h=200,zc=1')" alt="{{ $product['pagetitle'] }}"
-                        itemprop="image">
+                        src="@phpthumb($product['product_photo'],'w=210,h=210,zc=1')" alt="{{ $product['pagetitle'] }}"
+                        itemprop="image" width="210" height="210">
                 </figure>
                 <h2 itemprop="name" class="fs-5 ">{{ $product['pagetitle'] }}</h2>
             </header>

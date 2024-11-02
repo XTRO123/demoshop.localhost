@@ -17,7 +17,7 @@
     <meta property="og:type" content="{{$ogType ?? 'website'}}">
     @endif
 
- 
+
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="@config('site_hostnames')">
     <meta property="twitter:url" content="@config('site_url')">
@@ -33,15 +33,10 @@
     <meta property="og:url" content="{{ urlProcessor::makeUrl($id,'','','full') }}">
     @endif
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+    <link href="template/css/bootstrap.min.css" rel="stylesheet">
+    <script src="template/js/bootstrap.bundle.min.js"></script>
+    <script src="template/js/jquery-3.7.1.min.js"></script>
+
     {!! evo()->getConfig('client_header_codes') !!}
-    <script>
-        /**
-         *  капча Яндекс
-         */
-        window.sitekey = "{{evo()->getConfig('y-captcha-sitekey') ?? null}}";
-    </script>
+
 </head>

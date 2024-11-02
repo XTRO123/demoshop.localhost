@@ -19,9 +19,9 @@
                 </div>
 
                 <div class="mb-5">
-                    <img id="main_image" data-src="@phpthumb($article_photo,'w=1280')"
-                        src="@phpthumb($article_photo,'w=1280')" loading="lazy" class="img-thumbnail"
-                        alt="{{$pagetitle}}" itemprop="image">
+                    <img id="main_image" data-src="@phpthumb($article_photo,'w=900')"
+                        src="@phpthumb($article_photo,'w=900')" loading="lazy" class="img-thumbnail"
+                        alt="{{$pagetitle}}" itemprop="image" width="900" height="300">
                 </div>
                 <div>
                     <div class="mb-4" itemprop="articleBody">
@@ -34,7 +34,7 @@
                 <div class="d-flex justify-content-between align-items-center mb-5">
                     <div class="d-flex align-items-center" itemprop="author" itemscope=""
                         itemtype="https://schema.org/Person">
-                        <img src="assets/images/logo/apteka.women2.png" alt="@config('site_name')"
+                        <img src="@config('client_site_logo')" alt="@config('site_name')"
                             class="rounded-circle avatar-md">
                         <div class="ms-2 lh-1">
                             <h5 class="mb-0" itemprop="name">@config('site_name')</h5>

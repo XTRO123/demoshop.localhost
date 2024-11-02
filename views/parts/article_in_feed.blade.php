@@ -4,7 +4,7 @@
             <!-- img -->
             <div class="img-zoom">
                 <img class="img-thumbnail" src="@phpthumb($article['article_photo'],'w=600,h=200,zc=1')" alt=""
-                    class="img-fluid w-100" itemprop="image">
+                    class="img-fluid w-100" itemprop="image" width="400" height="140">
             </div>
         </a>
     </div>

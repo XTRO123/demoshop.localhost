@@ -8,9 +8,9 @@
         <article class="row mt-5" itemscope itemtype="https://schema.org/Product">
             <div class="col-lg-4 col-md-6 col-12">
                 <figure>
-                    <img id="main_image" data-src="@phpthumb($product_photo,'w=500')"
+                    <img id="main_image" data-src="@phpthumb($product_photo,'w=500,h=400,zc=1')"
                         src="@phpthumb($product_photo,'w=500')" loading="lazy" class="img-thumbnail"
-                        alt="{{$pagetitle}}" itemprop="image">
+                        alt="{{$pagetitle}}" itemprop="image" width="500"  height="400">
                 </figure>
             </div>
             <div class="col-lg-8 col-md-6 col-12">
