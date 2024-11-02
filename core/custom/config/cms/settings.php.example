@@ -1,8 +1,51 @@
 <?php
-/**
- * replace system settings
- * $modx->getConfig('site_name');
- */
 return [
-    'site_name' => 'test'
+
+    /**
+     * CUSTOM!
+     */
+    'catalog_id' => 2,              // id страницы каталога
+    'product_template_id' => 3,     // id шаблона товара
+    'catalog_section_template_id' => 5,  //  id шаблона секции каталога
+    'articles_id' => 9,             // id страницы "обзоры"
+    'articles_template_id' => 7,    // id шаблона статьи
+    'cart_id' => 3,                 // id страницы корзины
+    'cart_send_id' => 10,           // id страницы оформления
+    'y-captcha-sitekey' => 'KEY',
+    'y-captcha-secret' => 'KEY_SECRET',
+    'site_hostnames' => env('MODX_SITE_HOSTNAMES'),
+    /**
+     * Important!
+     */
+    'site_status' => 1,
+    'site_name' => '(DEV) EvoShop',
+    'ControllerNamespace' => 'EvolutionCMS\\Main\\Controllers\\',
+    'server_protocol' => 'http',
+    'filemanager_path' => env('MODX_BASE_PATH'),
+    'rb_base_dir' => env('MODX_BASE_PATH') . 'assets/',
+    'enable_cache' => 2,
+
+    'site_start' => 1,
+    'error_page' => 11,
+    //'unauthorized_page' => 2,
+
+
+    /**
+     * SEO
+     */
+    'friendly_url_suffix' => '',
+    'friendly_url_prefix' => '',
+    'make_folders' => 0,
+    /**
+     * adminka
+     */
+    'which_editor' => 'TinyMCE4',
+    'editor_css_path' => '/assets/templates/theme/editor.css',
+    'default_template' => 1,
+    'which_browser' => 'mcpuk',
+
+
+
+
+
 ];
