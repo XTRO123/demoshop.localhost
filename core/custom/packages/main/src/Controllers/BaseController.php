@@ -112,7 +112,6 @@ abstract class BaseController extends TemplateController
         $res = evo()->runSnippet('DLMenu', [
             'returnDLObject' => 1,
             'maxDepth' => 1,
-
             'parents' => 0
         ]);
         return $res->getMenu()[0];

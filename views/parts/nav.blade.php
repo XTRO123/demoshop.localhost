@@ -12,7 +12,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @foreach ($menu as $element)
                 <li class="nav-item">
-                    <a class="nav-link {{ isset($element['here']) ? 'active' : ''}}" aria-current="page"
+                    <a class="nav-link {{ isset($element['here']) || isset($element['active']) ? 'active' : ''}}" aria-current="page"
                         href="{{$element['url']}}">{{$element['e.pagetitle']}}</a>
                 </li>
                 @endforeach
