@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" data-bs-theme="dark" prefix="og: http://ogp.me/ns#">
+<html lang="ru" data-bs-theme="dark" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 
 @include('parts.head')
 

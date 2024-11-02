@@ -17,6 +17,16 @@
     <meta property="og:type" content="{{$ogType ?? 'website'}}">
     @endif
 
+ 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="@config('site_hostnames')">
+    <meta property="twitter:url" content="@config('site_url')">
+    <meta name="twitter:title" content="{{$metatitle}}">
+    <meta name="twitter:description" content="{{$metadescription}}">
+    @if (isset($ogImage) && !empty($ogImage ))
+    <meta name="twitter:image" content="{{$ogImage}}">
+    @endif
+
 
     <link rel="canonical" href="{{urlProcessor::makeUrl($id,'','','full')}}">
     @if (!empty ($id))
