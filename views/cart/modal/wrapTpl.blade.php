@@ -12,9 +12,9 @@
         <div class="alert alert-success ">
             Товары: <strong><span id="totalitems">{{ $data['count'] }}</span> шт.</strong> на сумму @price($data['total'])
         </div>
-        <ol class="list-group">
+        <ul class="list-group">
             {!! $data['dl.wrap'] !!}
-        </ol>
+        </ul>
         {!! $data['subtotals'] !!}
         @else
         <p>Корзина пуста</p>
