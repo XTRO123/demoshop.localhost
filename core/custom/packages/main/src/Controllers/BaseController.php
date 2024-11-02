@@ -7,7 +7,7 @@ use EvolutionCMS\TemplateController;
 use Carbon\Carbon;
 use EvolutionCMS\Main\Controllers\Seo\Metatags;
 
-class BaseController  extends AbstractBase
+abstract class BaseController extends TemplateController
 {
     use Metatags;
 
@@ -29,7 +29,7 @@ class BaseController  extends AbstractBase
      * Данные текущей страницы
      * Переопределять в наследниках
      */
-    public  function setPageData() {}
+    abstract public  function setPageData();
 
     /**
      * Не переопределять,
