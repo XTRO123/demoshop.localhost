@@ -12,6 +12,20 @@ class Product  extends BaseController
 
     public function setPageData()
     {
+        /* Можно и так
+        $val = evo()->getTemplateVars('*', '*', evo()->documentObject['id'], 1, 'category');
+        $tvcategories = [9]; // Нужная категория твшек
+        $tvexclude = [9]; // Исключение ТВ price
+        $productOptions = [];
+        if (is_array($val) && !empty($val)) {
+            foreach ($val as $key => $val) {
+                if (isset($val['category']) && in_array($val['category'], $tvcategories) && !(in_array($val['tmplvarid'], $tvexclude)) && $val['value'] != '') {
+                    $productOptions[] = $val;
+                }
+            }
+        }
+        dd($productOptions);
+        */
 
         $brands = evo()->runSnippet("multiParams", array("parent" => "1"));
         $brands = $this->strToArray($brands);
